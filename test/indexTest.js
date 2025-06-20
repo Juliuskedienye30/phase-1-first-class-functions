@@ -1,8 +1,13 @@
-require ( './helpers.js' );
+const {
+  receivesAFunction,
+  returnsANamedFunction,
+  returnsAnAnonymousFunction
+} = require('../index.js');
 
 const chai = require("chai");
 const spies = require("chai-spies");
 chai.use(spies);
+const expect = chai.expect;
 
 describe("index", () => {
   describe("receivesAFunction(callback)", () => {
